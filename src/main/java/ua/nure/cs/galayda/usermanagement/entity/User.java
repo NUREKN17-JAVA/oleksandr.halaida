@@ -1,5 +1,4 @@
-package ua.nure.cs.galayda.usermanagement;
-
+package ua.nure.cs.galayda.usermanagement.entity;
 import java.io.Serializable;
 import java.util.*;
 

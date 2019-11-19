@@ -1,7 +1,7 @@
 package ua.nure.cs.galayda.usermanagement;
 
 import junit.framework.TestCase;
-import ua.nure.cs.galayda.usermanagement.User;
+import ua.nure.cs.galayda.usermanagement.entity.User;
 
 import java.util.Calendar;
 

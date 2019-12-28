@@ -1,4 +1,5 @@
 package ua.nure.cs.galayda.usermanagement.db;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -27,8 +28,7 @@ public class ConnectionFactoryImpl implements ConnectionFactory {
     }
 
     @Override
-    public Connection createConnection() throws
-            ua.nure.cs.galayda.usermanagement.db.DatabaseException {
+    public Connection createConnection() throws DatabaseException {
         try {
             Class.forName(driver);
         } catch (ClassNotFoundException e) {
@@ -37,7 +37,7 @@ public class ConnectionFactoryImpl implements ConnectionFactory {
         try {
             return DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
-            throw new ua.nure.cs.galayda.usermanagement.db.DatabaseException(e);
+            throw new DatabaseException(e);
         }
 
     }

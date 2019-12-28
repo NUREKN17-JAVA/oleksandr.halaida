@@ -10,11 +10,11 @@ public abstract class DAOFactory {
 
     protected static final String USER_DAO = "dao.UserDao";
     private static final String DAO_FACTORY = "dao.Factory";
+
     protected static Properties properties;
+    protected static DAOFactory instance;
 
-    private static DAOFactory instance;
-
-    static {
+    static { //позволяет запускать фрагмент кода, когда жвм загружает файл класса в память, тем самым подготавливаем нашу фабрику к работе
         properties = new Properties();
         try {
             properties.load(Objects.requireNonNull(
@@ -39,9 +39,10 @@ public abstract class DAOFactory {
         return instance;
     }
 
-    public static void init(Properties prop) {
-        properties = prop;
-        instance = null;
+    public static void init(
+            Properties properties) { // позволяет заменить свойства, чтобы подложить mock-объект
+        DAOFactory.properties = properties;
+        instance = null; //пересоздаём фабрику уже с подлженными свойствами новыми
     }
 
     protected ConnectionFactory getConnectionFactory() {

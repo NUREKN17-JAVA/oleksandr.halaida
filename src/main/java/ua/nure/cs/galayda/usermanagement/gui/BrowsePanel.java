@@ -1,6 +1,5 @@
 package ua.nure.cs.galayda.usermanagement.gui;
 
-
 import ua.nure.cs.galayda.usermanagement.db.DatabaseException;
 import ua.nure.cs.galayda.usermanagement.entity.User;
 import ua.nure.cs.galayda.usermanagement.gui.util.Messages;

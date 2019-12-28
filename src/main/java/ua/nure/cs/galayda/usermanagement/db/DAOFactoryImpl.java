@@ -16,4 +16,9 @@ public class DAOFactoryImpl extends DAOFactory {
         }
         return result;
     }
+
+    @Override
+    protected ConnectionFactory getConnectionFactory() {
+        return new ConnectionFactoryImpl(properties);
+    }
 }

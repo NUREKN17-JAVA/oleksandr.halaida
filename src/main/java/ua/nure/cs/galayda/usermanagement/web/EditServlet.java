@@ -1,5 +1,6 @@
 package ua.nure.cs.galayda.usermanagement.web;
 
+
 import ua.nure.cs.galayda.usermanagement.db.DAOFactory;
 import ua.nure.cs.galayda.usermanagement.db.DatabaseException;
 import ua.nure.cs.galayda.usermanagement.entity.User;
